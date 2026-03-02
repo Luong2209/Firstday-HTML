@@ -1,0 +1,273 @@
+/* ====== Base ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #111827;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* A11Y focus */
+:focus-visible {
+  outline: 3px solid #fbbf24;
+  outline-offset: 3px;
+}
+
+/* ====== Skip link ====== */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 12px;
+  background: #ffffff;
+  color: #111827;
+  padding: 10px 12px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  text-decoration: none;
+  font-weight: 700;
+}
+.skip-link:focus {
+  left: 12px;
+}
+
+/* ====== Header ====== */
+.site-header {
+  background: #111827;
+  color: #fff;
+  padding: 26px 0 14px;
+}
+
+.header-inner {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #111827;
+  background: #fff;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 10px 14px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.site-header h1 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+.site-header p {
+  opacity: 0.9;
+}
+
+/* ====== Nav ====== */
+.nav {
+  width: min(1100px, 92%);
+  margin: 14px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+}
+.nav a:hover {
+  background: rgba(255,255,255,0.16);
+}
+
+/* ====== Main layout (Grid) ====== */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 18px;
+  padding: 18px 0 28px;
+}
+
+/* Cards */
+.section-main > section,
+.side,
+.site-footer {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.07);
+}
+
+.section-main > section + section {
+  margin-top: 14px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* ====== Table ====== */
+.table-wrap {
+  margin-top: 10px;
+  overflow: auto;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+table {
+  width: 100%;
+  min-width: 760px; /* giúp responsive có scroll ngang */
+  border-collapse: collapse;
+  background: #fff;
+}
+
+caption {
+  text-align: left;
+  padding: 12px;
+  font-weight: 800;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+  white-space: nowrap;
+}
+
+thead th {
+  background: #f3f4f6;
+  font-weight: 800;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+tbody tr:hover {
+  background: #e0f2fe;
+  transition: 0.25s;
+}
+
+tbody th[scope="row"] {
+  text-align: left;
+}
+
+/* ====== Form ====== */
+.form {
+  margin-top: 6px;
+  display: grid;
+  gap: 12px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  background: #fff;
+  transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  outline: none;
+}
+
+fieldset.field {
+  border: 1px dashed #d1d5db;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+legend {
+  font-weight: 900;
+  padding: 0 6px;
+}
+
+fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 14px;
+  font-weight: 700;
+}
+
+button[type="submit"] {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #1d4ed8;
+}
+
+/* ====== Aside ====== */
+.side ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.side li {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f9fafb;
+}
+
+.side li + li {
+  margin-top: 10px;
+}
+
+/* ====== Footer ====== */
+.site-footer {
+  width: min(1100px, 92%);
+  margin: 0 auto 24px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+}

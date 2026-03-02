@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khóa học Web Development | WebStarter</title>
+  <meta name="description" content="Trang giới thiệu khóa học, lịch học và form đăng ký." />
+</head>
+
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Bỏ qua nội dung</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/" aria-label="Trang chủ">WebStarter</a>
+      <div>
+        <h1>Khóa học Web Development</h1>
+        <p>Khóa học dành cho người mới bắt đầu, học theo lộ trình thực hành.</p>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#gioi-thieu">Giới thiệu</a>
+      <a href="#lich-hoc">Lịch học</a>
+      <a href="#dang-ky">Đăng ký</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main id="main" class="container layout">
+    <!-- Cột trái -->
+    <section class="section-main">
+      <!-- Giới thiệu -->
+      <section id="gioi-thieu">
+        <h2>Giới thiệu</h2>
+        <p>Việc mấu chốt của một DEV là hiểu rõ bản chất. Khóa học tập trung vào nền tảng HTML/CSS/JS và thực hành theo dự án.</p>
+      </section>
+
+      <!-- Lịch học -->
+      <section id="lich-hoc">
+        <h2>Lịch học</h2>
+
+        <div class="table-wrap" role="region" aria-label="Bảng lịch học" tabindex="0">
+          <table>
+            <caption>Lịch học của DEV</caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Ngày</th>
+                <th scope="col">7:30–10:00</th>
+                <th scope="col">20:00–24:00</th>
+                <th scope="col">Chủ đề</th>
+                <th scope="col">Bài tập</th>
+                <th scope="col">Ghi chú</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">Ngày 1</th>
+                <td colspan="2">HTML cơ bản</td>
+                <td>Nhập môn + cấu trúc</td>
+                <td>Bài tags + semantic</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Ngày 2</th>
+                <td>Form</td>
+                <td>JS cơ bản</td>
+                <td>Form + validation</td>
+                <td>Mini form</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Ngày 3</th>
+                <td>Table</td>
+                <td>Ôn tập</td>
+                <td>Table + A11Y</td>
+                <td>Làm bảng TKb</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Đăng ký -->
+      <section id="dang-ky">
+        <h2>Đăng ký</h2>
+
+        <form class="form" action="#" method="post">
+          <div class="field">
+            <label for="name">Họ tên</label>
+            <input type="text" id="name" name="name" required maxlength="30" />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="user@example.com" />
+          </div>
+
+          <div class="field">
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password" required minlength="6" maxlength="12" />
+          </div>
+
+          <div class="field">
+            <label for="level">Level</label>
+            <select id="level" name="level">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+            </select>
+          </div>
+
+          <fieldset class="field">
+            <legend>Sở thích</legend>
+            <label><input type="checkbox" name="skills[]" value="html" /> HTML</label>
+            <label><input type="checkbox" name="skills[]" value="css" /> CSS</label>
+            <label><input type="checkbox" name="skills[]" value="js" /> JS</label>
+          </fieldset>
+
+          <div class="field">
+            <label for="note">Ghi chú</label>
+            <textarea id="note" name="note" rows="3" placeholder="Bạn muốn học mục nào trước?"></textarea>
+          </div>
+
+          <button type="submit">Gửi đăng ký</button>
+        </form>
+      </section>
+
+      <section id="lien-he">
+        <h2>Liên hệ</h2>
+        <p>Email: contact@webstarter.test</p>
+      </section>
+    </section>
+
+    <!-- Cột phải -->
+    <aside class="side">
+      <h2>Thông tin nhanh</h2>
+      <ul>
+        <li><strong>Thời gian:</strong> Sáng 7:30–10:00, tối 20:00–24:00</li>
+        <li><strong>Yêu cầu:</strong> Biết gõ máy, có laptop</li>
+        <li><strong>Hotline:</strong> 0900 000 000</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 — NoCopyRight-Sound</p>
+  </footer>
+</body>
+</html>
