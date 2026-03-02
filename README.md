@@ -1,2 +1,2 @@
-# Day-1---HTML
+# Day1: HTML
 Mini-Project
